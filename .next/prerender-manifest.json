@@ -1,7 +1,8 @@
 {
   "version": 4,
   "routes": {
-    "/course-overview": {
+    "/_not-found": {
+      "initialStatus": 404,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -14,8 +15,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/course-overview",
-      "dataRoute": "/course-overview.rsc",
+      "srcRoute": "/_not-found",
+      "dataRoute": "/_not-found.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -54,8 +55,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/_not-found": {
-      "initialStatus": 404,
+    "/course-overview": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -68,8 +68,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/_not-found",
-      "dataRoute": "/_not-found.rsc",
+      "srcRoute": "/course-overview",
+      "dataRoute": "/course-overview.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -107,8 +107,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "55da80d332a0a7d1c91ab1c36adb1fe1",
-    "previewModeSigningKey": "9425e6351f478d6218b092ecc9df0bbe2bd5dace9da4a96269a3b3d301c5633e",
-    "previewModeEncryptionKey": "1f442c148678732af8e87c8a48461fd09dd6d7e19284f25f1ab4b6f7188a2a99"
+    "previewModeId": "6e1ba83eef5549d84b85ae016a14d19f",
+    "previewModeSigningKey": "ba0bc55a3080486683ce5d6245d723442389784eaa791a49c14b4a56c399415c",
+    "previewModeEncryptionKey": "f1f6ab487f5e7baefe7ff04a30cffd92830eb6a5f8fe25627e01b1509fead860"
   }
 }
