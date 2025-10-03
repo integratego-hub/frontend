@@ -1,3 +1,5 @@
+"use client";
+
 import gc1 from "@/assests/gc1.svg";
 import gc2 from "@/assests/gc2.svg";
 import gc3 from "@/assests/gc3.svg";
@@ -10,8 +12,38 @@ import footer2 from "@/assests/footer2.svg";
 import footer3 from "@/assests/footer3.svg";
 
 import Image from "next/image";
+import { useState } from "react";
+import { useMutation } from "@tanstack/react-query";
+import api from "@/app/api/axiosInstance";
 
 export default function GetInTouch() {
+  const [form, setForm] = useState({
+    fullName: "",
+    email: "",
+    phoneNumber: "",
+    interest: "",
+    message: "",
+  });
+
+  const enquiryMutation = useMutation({
+    mutationFn: async (payload) => {
+      const res = await api.post(`api/users/enquiry`, payload);
+      return res.data;
+    },
+  });
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    enquiryMutation.mutate(form, {
+      onSuccess: () => {
+        setForm({ fullName: "", email: "", phoneNumber: "", interest: "", message: "" });
+      },
+    });
+  };
   return (
     <>
       <section className="g_main_container">
@@ -23,38 +55,70 @@ export default function GetInTouch() {
                 Have questions about our programs? We're here to <br /> help you
                 choose the right path for your career.
               </div>
-              <form className="flex flex-col gap-3 w-full sm:w-[80%] lg:w-[70%]">
-                <div className="">
-                  <input className="form_input_text" placeholder="Full Name" />
-                </div>
-                <div>
-                  <input
-                    className="form_input_text"
-                    placeholder="Email Address"
-                  />
-                </div>
-                <div>
-                  <input
-                    className="form_input_text"
-                    placeholder="Phone Number"
-                  />
-                </div>
-                <div>
-                  <select className="form_input_text">
-                    <option>Select Course Interest</option>
-                  </select>
-                </div>
-                <div>
-                  <textarea
-                    className="form_input_text"
-                    placeholder="Message (Optional)"
-                  />
-                </div>
-                <div>
-                  <button type="submit" className="form_btn">
-                    Send Enquiry
-                  </button>
-                </div>
+              <form
+                onSubmit={handleSubmit}
+                className="flex flex-col gap-3 w-full sm:w-[80%] lg:w-[70%]"
+              >
+                <input
+                  className="form_input_text"
+                  placeholder="Full Name"
+                  name="fullName"
+                  value={form.fullName}
+                  onChange={handleChange}
+                />
+                <input
+                  className="form_input_text"
+                  placeholder="Email Address"
+                  name="email"
+                  type="email"
+                  value={form.email}
+                  onChange={handleChange}
+                />
+                <input
+                  className="form_input_text"
+                  placeholder="Number"
+                  name="phoneNumber"
+                  value={form.phoneNumber}
+                  onChange={handleChange}
+                />
+                <select
+                  className="form_input_text"
+                  name="interest"
+                  value={form.interest}
+                  onChange={handleChange}
+                >
+                  <option value="">Select interest Interest</option>
+                  <option value="frontend">Frontend Development</option>
+                  <option value="backend">Backend Development</option>
+                  <option value="fullstack">Fullstack Development</option>
+                </select>
+                <textarea
+                  className="form_input_text"
+                  placeholder="Message (Optional)"
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
+                />
+                <button
+                  type="submit"
+                  className="form_btn"
+                  disabled={enquiryMutation.isPending}
+                >
+                  {enquiryMutation.isPending ? "Sending..." : "Send Enquiry"}
+                </button>
+
+                {/* Built-in React Query states */}
+                {enquiryMutation.isSuccess && (
+                  <p className="text-green-600 mt-2">
+                    {enquiryMutation.data?.message}
+                  </p>
+                )}
+                {enquiryMutation.isError && (
+                  <p className="text-red-600 mt-2">
+                    {enquiryMutation.error?.response?.data?.error ||
+                      "Something went wrong"}
+                  </p>
+                )}
               </form>
               <div className="flex items-center gap-3">
                 <div className="g_f_secure">Privacy Protected</div>
@@ -73,7 +137,7 @@ export default function GetInTouch() {
               <div className="flex items-start gap-2">
                 <Image src={gc2} alt="Email" widdth="auto" height="auto" />
                 <div className="flex flex-col items-start gap-1">
-                  <div className="g_c_e_h">Phone</div>
+                  <div className="g_c_e_h">phoneNumber</div>
                   <div className="g_c_e_desc">+91 87654 32109</div>
                 </div>
               </div>
@@ -117,7 +181,7 @@ export default function GetInTouch() {
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-4">
               <div className="f_l">Home</div>
-              <div className="f_l">Courses</div>
+              <div className="f_l">interests</div>
               <div className="f_l">About</div>
               <div className="f_l">Privacy</div>
               <div className="f_l">Terms</div>

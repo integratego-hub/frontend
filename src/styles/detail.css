@@ -68,3 +68,283 @@
   border-radius: 50%;
   background: #dbeafe;
 }
+
+/* Goal Section */
+
+.d-g-h {
+  color: #111827;
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 111.111% */
+}
+.d-g-h span {
+  color: #000;
+  font-family: "Montserrat";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+}
+.g-c-main-p {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 87px;
+  align-self: stretch;
+  margin-top: 50px;
+}
+.g-c-c {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+.c-m-du {
+  display: flex;
+  padding: 8px 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #000;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+  border-radius: 9999px;
+  background: #e6e6e6;
+}
+.c-m-du-h {
+  color: #000;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+}
+.g-main-course-heading {
+  color: #111827;
+  font-family: "Montserrat";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 111.111% */
+}
+.g-main-para {
+  color: #4b5563;
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32.5px; /* 162.5% */
+}
+.g-c-p {
+  color: #374151;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+}
+.course-pr-img {
+  border-radius: 24px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* Process section */
+.p-m-h {
+  color: #2b2b2b;
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 56px; /* 155.556% */
+  letter-spacing: -0.72px;
+  text-transform: capitalize;
+}
+.p-m-p {
+  color: #2b2b2b;
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+
+.d-p-m-box {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 80px;
+  /* align-self: stretch; */
+  margin-top: 50px;
+  position: relative;
+  /* z-index: 99; */
+}
+.dpl {
+  position: absolute;
+  /* top: 80px; */
+  right: 450px;
+  bottom: 83px;
+  stroke-width: 4px;
+  stroke: #4c93fd;
+  z-index: -1;
+}
+.d-p-card {
+  display: flex;
+  padding: 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border-radius: 24px;
+  border: 1px solid #4c93fd;
+  background: #fff;
+  box-shadow: 0 35px 116px 0 rgba(154, 167, 193, 0.25);
+}
+.d-p-f-h {
+  color: #111827;
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 100% */
+  text-transform: capitalize;
+}
+.d-p-f-p {
+  color: #4b5563;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+.d-p-m-h {
+  color: #4c93fd;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #4c93fd;
+  font-family: "Montserrat";
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+/* Skills Master */
+.sm-container {
+  padding: 100px 0;
+}
+.s-m-con {
+  display: flex;
+  /* padding: 40px 0; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.s-m-h {
+  color: #111827;
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px; /* 120% */
+  margin-bottom: -50px;
+}
+
+.s-ss-1 {
+  max-width: 100%;
+  max-height: 100%;
+  width: 795px;
+  height: 236px;
+  flex-shrink: 0;
+  margin-bottom: -150px; /* reduce vertical gap */
+  position: relative;
+}
+.ss-img-1 {
+  position: absolute;
+  top: 130%;
+  left: -1%;
+}
+
+.s-ss-2 {
+  max-width: 100%;
+  max-height: 100%;
+  width: 1152px;
+  height: 341px;
+  flex-shrink: 0;
+  margin-bottom: -250px; /* reduce vertical gap */
+  position: relative;
+}
+.s-ss-3 {
+  max-width: 100%;
+  max-height: 100%;
+  width: 1439px;
+  height: 425px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* Transformation Journey */
+.t-j-m-h{
+  color: #1E1E1E;
+text-align: center;
+font-family: "Montserrat";
+font-size: 30px;
+font-style: normal;
+font-weight: 600;
+line-height: 36px; /* 120% */
+}
+.t-main-card {
+  display: flex;
+  padding-top: 25px;
+  padding-left: 30px;
+  padding-right: 250px;
+  padding-bottom: 25px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  border-left: 3.333px solid #4c93fd;
+  background: rgba(212, 212, 212, 0.1);
+  position: relative;
+  /* gap: -58px; */
+  /* gap: 100px; */
+}
+.t-main-card-after {
+  display: flex;
+  padding-top: 25px;
+  padding-left: 30px;
+  padding-right: 250px;
+  padding-bottom: 25px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  border-left: 3.333px solid #4c93fd;
+  background: rgba(76, 147, 253, 0.1);
+  position: relative;
+}
+.t-before-h {
+  color: #111827;
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px; /* 140% */
+}
+.b-p {
+  color: #374151;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
