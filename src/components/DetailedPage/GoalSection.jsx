@@ -8,7 +8,7 @@ export default function GoalSection() {
       <div className="container">
         <div className="flex justify-center items-center flex-col">
           <div className="d-g-h">
-            Two Courses. One Goal – <span> Your Career Growth</span>
+            One Course. One Goal – <span> Your Career Growth</span>
           </div>
           <div className="g-c-main-p">
             <div className="g-c-c">
@@ -17,7 +17,7 @@ export default function GoalSection() {
                 <div className="c-m-du-h">4 Months Program</div>
               </div>
               <div className="g-main-course-heading">
-                Full Stack Integration Program
+                IBM Integration Program
               </div>
               <div className="g-main-para">
                 A comprehensive 4-month structured program designed for

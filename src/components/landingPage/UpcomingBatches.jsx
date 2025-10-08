@@ -125,7 +125,13 @@ export default function UpcomingBatches() {
                     <div className="closing_soon">{row.left}</div>
                   </td>
                   <td className="px-6 py-4">
-                    <div className="regist_action">Register</div>
+                    <div className="regist_action"  onClick={() => {
+                    const section = document.getElementById("get-in-touch");
+                    if (section) {
+                      section.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                  style={{ cursor: "pointer" }}>Register</div>
                   </td>
                 </tr>
               ))}

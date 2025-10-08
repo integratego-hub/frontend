@@ -43,7 +43,7 @@ export default function WhyChoose() {
             </div>
           </div>
           <div className="flex gap-3 items-center justify-center">
-            {options.map((item,index) => (
+            {options.map((item, index) => (
               <div className="why_main_card" key={index}>
                 <div className="why_main_inside">
                   <div className="why_icon">
@@ -110,7 +110,16 @@ export default function WhyChoose() {
                   <div className="eco_text">Dedicated Mentor Support</div>
                 </div>
               </div>
-              <div className="grab_btn">
+              <div
+                className="grab_btn"
+                onClick={() => {
+                  const section = document.getElementById("get-in-touch");
+                  if (section) {
+                    section.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+                style={{ cursor: "pointer" }}
+              >
                 <span className="grab_btn_text">Grab Your Spot</span>
               </div>
             </div>

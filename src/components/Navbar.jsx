@@ -4,7 +4,6 @@ import Image from "next/image";
 import logo from "@/assests/logo-trans.png";
 import Link from "next/link";
 
-
 const Navbar = () => {
   return (
     <header className=" main-container">
@@ -13,13 +12,15 @@ const Navbar = () => {
       <nav className="container main-header">
         {/* Logo */}
         <div className="logo_name">
-          <Image
-            src={logo}
-            className="bg-white inine-block"
-            alt="Logo"
-            width={150}
-            height={150}
-          />
+          <Link href="/">
+            <Image
+              src={logo}
+              className="bg-white inine-block"
+              alt="Logo"
+              width={150}
+              height={150}
+            />
+          </Link>
         </div>
 
         {/* Menu */}
@@ -30,9 +31,9 @@ const Navbar = () => {
           >
             <div className="nav_m_item">Courses</div>
           </Link>
-          <div className="nav_m_item">About</div>
-
-          <div className="nav_m_item">Contact</div>
+          <Link href="/about-us"  style={{ textDecoration: "none", color: "inherit" }}>
+            <div className="nav_m_item">About</div>
+          </Link>
         </div>
 
         {/* Buttons */}

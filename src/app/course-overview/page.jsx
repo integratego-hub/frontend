@@ -1,3 +1,5 @@
+
+
 import GoalSection from "@/components/DetailedPage/GoalSection";
 import HeroSection from "@/components/DetailedPage/HeroSection";
 import ProcessSection from "@/components/DetailedPage/ProcessSection";

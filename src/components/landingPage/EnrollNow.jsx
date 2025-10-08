@@ -1,3 +1,5 @@
+"use client"
+
 import e1 from "@/assests/e1.svg";
 import e2 from "@/assests/e2.svg";
 import e3 from "@/assests/e3.svg";
@@ -17,8 +19,30 @@ export default function EnrollNow() {
               with our proven <br /> training programs
             </div>
             <div className="flex items-center gap-[28px] justify-center">
-              <div className="enroll_now">Enroll Now</div>
-              <div className="enroll_talk">Talk to Advisor</div>
+              <div
+                className="enroll_now"
+                onClick={() => {
+                  const section = document.getElementById("get-in-touch");
+                  if (section) {
+                    section.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+                style={{ cursor: "pointer" }}
+              >
+                Enroll Now
+              </div>
+              <div
+                className="enroll_talk"
+                onClick={() => {
+                  const section = document.getElementById("get-in-touch");
+                  if (section) {
+                    section.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+                style={{ cursor: "pointer" }}
+              >
+                Talk to Advisor
+              </div>
             </div>
             <div className="flex items-center gap-[32px] justify-center">
               <div className="flex items-center gap-2">

@@ -46,7 +46,7 @@ export default function GetInTouch() {
   };
   return (
     <>
-      <section className="g_main_container">
+      <section className="g_main_container" id="get-in-touch">
         <div className="container flex justify-center items-center">
           <div className="grid grid-cols-2 gap-4 items-center justify-center">
             <div className="g_in_box">
