@@ -15,14 +15,16 @@ import Image from "next/image";
 import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import api from "@/app/api/axiosInstance";
+import Link from "next/link";
 
 export default function GetInTouch() {
   const [form, setForm] = useState({
-    fullName: "",
-    email: "",
-    phoneNumber: "",
-    interest: "",
-    message: "",
+    fullName: null,
+    email: null,
+    phoneNumber: null,
+    interest: null,
+    message: null,
+    workshop: null,
   });
 
   const enquiryMutation = useMutation({
@@ -40,7 +42,14 @@ export default function GetInTouch() {
     e.preventDefault();
     enquiryMutation.mutate(form, {
       onSuccess: () => {
-        setForm({ fullName: "", email: "", phoneNumber: "", interest: "", message: "" });
+        setForm({
+          fullName: null,
+          email: null,
+          phoneNumber: null,
+          interest: null,
+          message: null,
+          workshop: null,
+        });
       },
     });
   };
@@ -65,7 +74,9 @@ export default function GetInTouch() {
                   name="fullName"
                   value={form.fullName}
                   onChange={handleChange}
+                  required
                 />
+
                 <input
                   className="form_input_text"
                   placeholder="Email Address"
@@ -73,25 +84,44 @@ export default function GetInTouch() {
                   type="email"
                   value={form.email}
                   onChange={handleChange}
+                  required
                 />
+
                 <input
                   className="form_input_text"
                   placeholder="Number"
                   name="phoneNumber"
+                  type="tel"
                   value={form.phoneNumber}
                   onChange={handleChange}
+                  required
                 />
+
                 <select
                   className="form_input_text"
                   name="interest"
                   value={form.interest}
                   onChange={handleChange}
+                  required
                 >
-                  <option value="">Select interest Interest</option>
-                  <option value="frontend">Frontend Development</option>
-                  <option value="backend">Backend Development</option>
-                  <option value="fullstack">Fullstack Development</option>
+                  <option value="">Select Interest</option>
+                  <option value="IBM Integration Bus (IIB) / IBM App Connect Enterprise (ACE)">
+                    IBM Integration Bus (IIB) / IBM App Connect Enterprise (ACE)
+                  </option>
                 </select>
+
+                <select
+                  className="form_input_text"
+                  name="workshop"
+                  value={form.workshop}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Interested in Workshop?</option>
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                </select>
+
                 <textarea
                   className="form_input_text"
                   placeholder="Message (Optional)"
@@ -99,6 +129,7 @@ export default function GetInTouch() {
                   value={form.message}
                   onChange={handleChange}
                 />
+
                 <button
                   type="submit"
                   className="form_btn"
@@ -107,12 +138,12 @@ export default function GetInTouch() {
                   {enquiryMutation.isPending ? "Sending..." : "Send Enquiry"}
                 </button>
 
-                {/* Built-in React Query states */}
                 {enquiryMutation.isSuccess && (
                   <p className="text-green-600 mt-2">
                     {enquiryMutation.data?.message}
                   </p>
                 )}
+
                 {enquiryMutation.isError && (
                   <p className="text-red-600 mt-2">
                     {enquiryMutation.error?.response?.data?.error ||
@@ -131,14 +162,14 @@ export default function GetInTouch() {
                 <Image src={gc1} alt="Email" widdth="auto" height="auto" />
                 <div className="flex flex-col items-start gap-1">
                   <div className="g_c_e_h">Email</div>
-                  <div className="g_c_e_desc">info@integratego.com</div>
+                  <div className="g_c_e_desc">battula@integratego.com</div>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <Image src={gc2} alt="Email" widdth="auto" height="auto" />
                 <div className="flex flex-col items-start gap-1">
-                  <div className="g_c_e_h">phoneNumber</div>
-                  <div className="g_c_e_desc">+91 87654 32109</div>
+                  <div className="g_c_e_h">PhoneNumber</div>
+                  <div className="g_c_e_desc">+91 9705 558 559</div>
                 </div>
               </div>
               <div className="flex items-baseline gap-2">
@@ -146,8 +177,8 @@ export default function GetInTouch() {
                 <div className="flex flex-col items-start gap-1">
                   <div className="g_c_e_h">Support Hours</div>
                   <div className="g_c_e_desc">
-                    Monday - Friday: 9:00 AM - 7:00 PM <br /> Saturday: 10:00 AM
-                    - 4:00 PM
+                    Monday - Sunday: 9:00 AM - 10:00 PM <br /> Sunday: 10:00 AM
+                    - 6:00 PM
                   </div>
                 </div>
               </div>
@@ -155,21 +186,35 @@ export default function GetInTouch() {
                 <Image src={gc4} alt="Email" widdth="auto" height="auto" />
                 <div className="flex flex-col items-start gap-1">
                   <div className="g_c_e_h">Office</div>
-                  <div className="g_c_e_desc">
-                    Tech Hub, Electronic City Bangalore, Karnataka 560100
-                  </div>
+                  <div className="g_c_e_desc">Kphb,Hyderabad,500085</div>
                 </div>
               </div>
               <div className="g_c_b_l"></div>
               <div className="flex items-center gap-3">
                 <div className="g_c_f_s_in">
-                  <Image src={gc5} alt="LinkedIN" width="auto" height="auto" />
+                  <Link href="https://www.linkedin.com/in/integrate-go-45b842385/">
+                    <Image
+                      src={gc5}
+                      alt="LinkedIN"
+                      width="auto"
+                      height="auto"
+                    />
+                  </Link>
                 </div>
                 <div className="g_c_f_s_you">
-                  <Image src={gc6} alt="Youtube" width="auto" height="auto" />
+                  <Link href="https://www.youtube.com/@IntegrateGo">
+                    <Image src={gc6} alt="Youtube" width="auto" height="auto" />
+                  </Link>
                 </div>
                 <div className="g_c_f_s_ins">
-                  <Image src={gc7} alt="Instagram" width="auto" height="auto" />
+                  <Link href="https://www.instagram.com/integrateg0/">
+                    <Image
+                      src={gc7}
+                      alt="Instagram"
+                      width="auto"
+                      height="auto"
+                    />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -180,17 +225,45 @@ export default function GetInTouch() {
         <div className="container flex flex-col gap-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-4">
-              <div className="f_l">Home</div>
-              <div className="f_l">interests</div>
-              <div className="f_l">About</div>
-              <div className="f_l">Privacy</div>
-              <div className="f_l">Terms</div>
+              <Link href="/" style={{ textDecoration: "none" }}>
+                <div className="f_l">Home</div>
+              </Link>
+              <Link href="/about-us" style={{ textDecoration: "none" }}>
+                <div className="f_l">About</div>
+              </Link>
+              <Link href="/privacy-policy" style={{ textDecoration: "none" }}>
+                <div className="f_l">Privacy</div>
+              </Link>
+              <Link
+                href="/terms-and-conditions"
+                style={{ textDecoration: "none" }}
+              >
+                <div className="f_l">Terms</div>
+              </Link>
+              <Link href="/no-refund-policy" style={{ textDecoration: "none" }}>
+                <div className="f_l">No Refund Policy</div>
+              </Link>
             </div>
             <div className="flex items-center gap-3">
-              <Image src={footer1} alt="LinkedIn" width="auto" height="auto" />
-              <Image src={footer2} alt="Instagram" width="auto" height="auto" />
-
-              <Image src={footer3} alt="Youtube" width="auto" height="auto" />
+              <Link href="https://www.linkedin.com/in/integrate-go-45b842385/">
+                <Image
+                  src={footer1}
+                  alt="LinkedIn"
+                  width="auto"
+                  height="auto"
+                />
+              </Link>
+              <Link href="https://www.instagram.com/integrateg0/">
+                <Image
+                  src={footer2}
+                  alt="Instagram"
+                  width="auto"
+                  height="auto"
+                />
+              </Link>
+              <Link href="https://www.youtube.com/@IntegrateGo">
+                <Image src={footer3} alt="Youtube" width="auto" height="auto" />
+              </Link>
             </div>
           </div>
           <div className="g_c_b_l"></div>

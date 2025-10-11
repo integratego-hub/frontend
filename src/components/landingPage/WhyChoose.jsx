@@ -8,23 +8,26 @@ import g3 from "@/assests/g3.svg";
 
 const options = [
   {
+    id: 1,
     icon: w1,
     name: "Industry-Relevant Skills",
-    desc: "Learn exactly what companies use inproduction environments with real-world scenarios.",
+    desc: "Integration Patterns,IBM MQ (Message Queue),REST & SOAP Web Services,Database Integration",
     verified: "Verified",
     update: "Updated 2025 Curriculum",
   },
   {
+    id: 2,
     icon: w2,
     name: "Placement Support",
-    desc: "Mock interviews, resume help, direct referrals to top companies in the industry.",
+    desc: "Interview Preparation,Real-Time Project Exposure,Industry Mentorship,Placement Drives & Referrals",
     verified: "Verified",
     update: "Updated 2025 Curriculum",
   },
   {
+    id: 3,
     icon: w3,
     name: "Hands-On Learning",
-    desc: "Projects from real integration scenarios used by Fortune 500 companies.",
+    desc: "Our training is fully designed around hands-on labs, industry case studies, and real project environments to prepare you for real-world integration challenges.",
     verified: "Verified",
     update: "Updated 2025 Curriculum",
   },
@@ -38,8 +41,10 @@ export default function WhyChoose() {
           <div className="flex flex-col gap-2">
             <div className="why_heading">Why Choose IntegrateGo</div>
             <div className="why_desc">
-              Experience the difference with our industry-leading approach to
-              IBM integration training
+              To empower every learner to become industry-ready, certified, and <br />
+              confident in building and managing enterprise-grade integrations <br />
+              using IBM Integration Bus (IIB) and IBM App Connect 
+              Enterprise (ACE).
             </div>
           </div>
           <div className="flex gap-3 items-center justify-center">
@@ -56,13 +61,20 @@ export default function WhyChoose() {
                   </div>
                 </div>
                 <div className="why_card_heading">{item.name}</div>
-                <div className="why_card_desc">{item.desc}</div>
-                <div className="flex items-center gap-3">
+                <div className="why_card_desc">
+                  {/* {item.id !== 3 && (
+                    <ul>
+                      <li>{}</li>
+                    </ul>
+                  )} */}
+                  {item.desc}
+                </div>
+                {/* <div className="flex items-center gap-3">
                   <div className="verified">
                     <span className="v-text">{item.verified}</span>
                   </div>
                   <div className="update">{item.update}</div>
-                </div>
+                </div> */}
               </div>
             ))}
           </div>

@@ -14,17 +14,19 @@ export default function MissionVision() {
             <Image src={img1} alt="Our Mission" width="auto" height="auto" />
             <div className="o-m-h">Our Mission</div>
             <div className="o-m-p">
-              To empower learners with industry-standard integration training,<br />
-              bridging academics and real-world careers.
+              At IntegrateGo, our mission is to empower aspiring developers
+              through industry-focused training in modern technologies like IBM
+              Integration Bus, App Connect, DevOps, Linux, and Oracle.
             </div>
             <Image src={img3} alt="Our Mission" width="auto" height="auto" />
           </div>
-            <div className="mission-main">
+          <div className="mission-main">
             <Image src={img2} alt="Our Mission" width="auto" height="auto" />
             <div className="o-m-h">Our Vision</div>
             <div className="o-m-p">
-              To be the most trusted platform for integration technologies<br />
-worldwide.
+              Through expert mentorship, practical learning, and dedicated
+              career support, we prepare learners to excel in the modern tech
+              world and achieve lasting professional success.
             </div>
             <Image src={img4} alt="Our Mission" width="auto" height="auto" />
           </div>

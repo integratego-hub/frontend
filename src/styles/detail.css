@@ -7,6 +7,7 @@
   font-weight: 600;
   line-height: 60px; /* 100% */
   position: relative;
+  opacity: 1;
 }
 .expert_led {
   color: #4c93fd;
@@ -15,6 +16,13 @@
   font-style: normal;
   font-weight: 600;
   line-height: 60px;
+}
+.expert_led_outcome {
+  color: #4c93fd;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
 }
 .d_main_desc {
   color: #4b5563;
@@ -100,7 +108,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: 15px;
 }
 .c-m-du {
   display: flex;
@@ -295,14 +303,14 @@
 }
 
 /* Transformation Journey */
-.t-j-m-h{
-  color: #1E1E1E;
-text-align: center;
-font-family: "Montserrat";
-font-size: 30px;
-font-style: normal;
-font-weight: 600;
-line-height: 36px; /* 120% */
+.t-j-m-h {
+  color: #1e1e1e;
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px; /* 120% */
 }
 .t-main-card {
   display: flex;

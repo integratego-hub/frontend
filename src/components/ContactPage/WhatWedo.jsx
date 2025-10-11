@@ -113,7 +113,7 @@ export default function WhatWeDo() {
         <div>
           <div className="w-w-d-main-h">Why We're Different</div>
         </div>
-        <div className="grid grid-cols-2 gap-3 items-center mt-5">
+        <div className="grid grid-cols-2  items-start mt-5">
           <Image src={img7} alt="why we diffrent" width="auto" height="auto" />
           <div className="flex flex-col items-start gap-7">
             <div className="flex items-start gap-3">
@@ -121,8 +121,9 @@ export default function WhatWeDo() {
               <div className="flex flex-col gap-2">
                 <div className="wd-h">Personalized learning journey</div>
                 <div className="wd-p">
-                  Tailored curriculum that adapts to your pace and learning
-                  style
+                  Work on live integration projects using IBM IIB/ACE, MQ, and
+                  APIs with real case studies from Banking, Insurance, and
+                  Telecom.
                 </div>
               </div>
             </div>
@@ -133,8 +134,8 @@ export default function WhatWeDo() {
                   Real industry experts, not freelancers
                 </div>
                 <div className="wd-p">
-                  Learn from professionals currently working in top tech
-                  companies
+                  Gain 80% lab-based learning — build, test, and deploy message
+                  flows using IBM Integration Toolkit and MQ environments.
                 </div>
               </div>
             </div>
@@ -143,8 +144,8 @@ export default function WhatWeDo() {
               <div className="flex flex-col gap-2">
                 <div className="wd-h">Placement-first training approach</div>
                 <div className="wd-p">
-                  Every module designed with job requirements and market demands
-                  in mind
+                  Learn from certified professionals sharing real-time use
+                  cases, best practices, and personalized mentorship.
                 </div>
               </div>
             </div>
@@ -153,7 +154,8 @@ export default function WhatWeDo() {
               <div className="flex flex-col gap-2">
                 <div className="wd-h">Global alumni network & community</div>
                 <div className="wd-p">
-                  Connect with successful graduates working worldwide
+                  Get resume, LinkedIn, and interview support, plus mock
+                  interviews and job referrals through our partner network.
                 </div>
               </div>
             </div>
@@ -179,7 +181,9 @@ export default function WhatWeDo() {
         <div>
           <div className="w-w-d-main-h">What Drives Us</div>
           <div className="w-w-d-main-p">
-            The core values that guide everything we do
+            At IntegrateGo, we empower the next generation of integration <br />
+            professionals with the skills and confidence to transform how <br />
+            businesses connect systems and data.
           </div>
         </div>
 
@@ -188,32 +192,32 @@ export default function WhatWeDo() {
             <Image src={wt1} alt="Excellence" width="auto" height="auto" />
             <div className="wt-heading">Excellence</div>
             <div className="wt-para">
-              Delivering industry- standard learning experiences that exceed
-              expectations and prepare you for success.
+              At IntegrateGo, excellence is our standard, delivering top-quality
+              training and real-world learning for integration success.
             </div>
           </div>
           <div className="dd-card">
             <Image src={wt2} alt="Excellence" width="auto" height="auto" />
             <div className="wt-heading">Integrity</div>
             <div className="wt-para">
-              Honest guidance, transparent processes, and no false promises –
-              just genuine commitment to your growth.
+              At IntegrateGo, integrity guides us — built on trust,
+              transparency, and accountability in teaching and support.
             </div>
           </div>
           <div className="dd-card">
             <Image src={wt3} alt="Excellence" width="auto" height="auto" />
             <div className="wt-heading">Innovation</div>
             <div className="wt-para">
-              Constantly evolving our methods and curriculum to stay ahead of
-              industry trends and technologies.
+              At IntegrateGo, innovation drives our teaching and support,
+              helping learners stay ahead in the evolving integration world.
             </div>
           </div>
           <div className="dd-card">
             <Image src={wt4} alt="Excellence" width="auto" height="auto" />
             <div className="wt-heading">Community</div>
             <div className="wt-para">
-              Building lasting relationships and a supportive network that
-              extends far beyond the classroom.
+              At IntegrateGo, we foster a collaborative community where
+              learners, mentors, and alumni grow together and share knowledge.
             </div>
           </div>
         </div>

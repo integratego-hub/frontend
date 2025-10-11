@@ -67,22 +67,26 @@ export default function Featured() {
             </div>
             <div className="f_card_details order-1">
               <div className="f_card_d_heading">
-                <div className="f_card_h">1-Week IBM IIB / ACE Workshop</div>
-                <div className="f_card_place">Trusted by 500+ Learners</div>
+                <div className="f_card_h">
+                  1-Week IBM IIB / App Connect (ACE) Workshop
+                </div>
+                <div className="f_card_place">
+                  By IntegrateGo | Online & Offline | Certificate Included
+                </div>
               </div>
               <div className="f_card_desc">
-                Intensive hands-on workshop focusing on IBM Integration Bus and
-                App Connect Enterprise fundamentals. Ideal for developers who
-                need quick upskilling in IBM integration technologies.
+                Master enterprise integration in just 6 days! Learn IBM IIB/ACE,
+                build real-time message flows, APIs, and work on a mini project.
+                Ideal for students, grads, and IT pros.
               </div>
               <div className="f_card_in_detail">
                 <div className="d_t">
                   <Image src={f2} width="auto" height="auto" alt="duration" />
-                  <div className="d_t_title">Duration: 6 Days</div>
+                  <div className="d_t_title">Flexible weekly batches (Mon–Sat)</div>
                 </div>
                 <div className="d_t">
                   <Image src={f3} width="auto" height="auto" alt="duration" />
-                  <div className="d_t_title">Hands-On Labs</div>
+                  <div className="d_t_title">Hands-on training</div>
                 </div>
                 <div className="d_t">
                   <Image src={f4} width="auto" height="auto" alt="duration" />
@@ -90,8 +94,9 @@ export default function Featured() {
                 </div>
                 <div className="d_t">
                   <Image src={f5} width="auto" height="auto" alt="duration" />
-                  <div className="d_t_title">Certificate Provided</div>
+                  <div className="d_t_title">E-Certificate</div>
                 </div>
+                <div className="d_t_title">Get industry-ready—fast!</div>
               </div>
               <Link
                 href="/course-overview"

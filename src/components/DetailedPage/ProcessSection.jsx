@@ -12,8 +12,7 @@ export default function ProcessSection() {
         <div className="flex flex-col gap-2">
           <div className="p-m-h">What’s our process</div>
           <div className="p-m-p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna,
-            non nisl tincidunt ut elementum turpis.
+            From learning to placement — a proven process that builds skills, confidence, and career success.
           </div>
         </div>
         <div className="d-p-m-box">
@@ -23,22 +22,25 @@ export default function ProcessSection() {
               <div className="flex flex-col gap-2 items-start">
                 <div className="d-p-f-h">Foundation Building</div>
                 <div className="d-p-f-p">
-                  Linux fundamentals, Git version control, integration basics,
-                  and<br /> development environment setup.
+                  Build a strong integration foundation by mastering EAI, IBM
+                  IIB/ACE <br /> architecture,and hands-on data transformation
+                  skills.
                 </div>
               </div>
             </div>
-            <div className="d-p-m-h">Month 1</div>
+            <div className="d-p-m-h">Month 1 - 2</div>
           </div>
           <div className="flex justify-between items-center">
-            <div className="d-p-m-h">Month 2</div>
+            <div className="d-p-m-h">Month 2 - 3</div>
             <div className="d-p-card">
               <Image src={dp1} alt="foundation" width="auto" height="auto" />
               <div className="flex flex-col gap-2 items-start">
                 <div className="d-p-f-h">IBM IIB Core Development</div>
                 <div className="d-p-f-p">
-                  Message flows, ESQL programming, adapters,<br /> transformations,
-                  and first hands-on project.
+                  Master IBM IIB core development — from message flows and ESQL
+                  <br />
+                  to connectivity, debugging, and real-world integration
+                  projects.
                 </div>
               </div>
             </div>
@@ -49,22 +51,25 @@ export default function ProcessSection() {
               <div className="flex flex-col gap-2 items-start">
                 <div className="d-p-f-h">ACE Advanced Concepts</div>
                 <div className="d-p-f-p">
-                  App Connect Enterprise, advanced patterns, error handling,<br />
-                  monitoring, and second project.
+                  Master advanced IBM ACE concepts — from APIs and integration{" "}
+                  <br />
+                  patterns to deployment, monitoring, and real-world enterprise
+                  projects.
                 </div>
               </div>
             </div>
-            <div className="d-p-m-h">Month 3</div>
+            <div className="d-p-m-h">Month 3 - 4</div>
           </div>
           <div className="flex justify-between items-center">
-            <div className="d-p-m-h">Month 4</div>
+            <div className="d-p-m-h">Month 4 - 6</div>
             <div className="d-p-card">
               <Image src={dp1} alt="foundation" width="auto" height="auto" />
               <div className="flex flex-col gap-2 items-start">
-                <div className="d-p-f-h">Real Projects & Career Prep</div>
+                <div className="d-p-f-h">Real Projects, Career Prep & Job support</div>
                 <div className="d-p-f-p">
-                  Capstone project, resume building, mock interviews, and<br />
-                  placement assistance.
+                  Gain real-world integration experience through IBM IIB/ACE <br />
+                  projects and career prep with resume, interview, and job
+                  support.
                 </div>
               </div>
             </div>

@@ -13,13 +13,14 @@ export default function Hero() {
             <div className="hero_main_container">
               <div className="hero_main_first">
                 <div className="first_main_heading">
-                  Ready to Conquer{" "}
-                  <span className="first_main_high">FULL STACK</span>{" "}
-                  DEVELOPMENT?
+                  IBM Integration Bus
+                  <span className="first_main_high"> (IIB) </span>{" "}
+                /  <br /> IBM App Connect Enterprise <span className="first_main_high">(ACE)</span>
                 </div>
                 <div className="first_main_desc">
-                  Ignite your coding career with immersive mentorship, hands-on
-                  projects, and guaranteed placement support.
+                  Empowering integration professionals with IBM App Connect and
+                  Integration Bus expertise. Providing high-quality tutorials,
+                  expert tips, and career-focused guidance.
                 </div>
                 <div
                   className="first_main_btn"

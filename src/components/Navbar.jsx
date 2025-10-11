@@ -37,12 +37,12 @@ const Navbar = () => {
         </div>
 
         {/* Buttons */}
-        <div className="nav_buttons flex items-center gap-3">
+        {/* <div className="nav_buttons flex items-center gap-3">
           <div className="login_btn">Sign In</div>
           <div className="signup_btn">
             <div className="signup_btn_text">Get Started</div>
           </div>
-        </div>
+        </div> */}
       </nav>
     </header>
   );

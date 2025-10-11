@@ -11,14 +11,19 @@ export default function HeroSection() {
     <section className=" py-10">
       <div className="container">
         <div className="d_main_head">
-          Advance Your Career <br /> with <br />{" "}
-          <span className="expert_led">Expert-Led</span> Integration <br />{" "}
-          Programs
+          Transform Your Career <br /> with Hands-On 
+          <span className="expert_led">
+            <br /> IBM Integration Bus(IIB)
+          </span>
+          <br />
+          <span className="expert_led">App Connect Enterprise(ACE)</span><br />
+          Training{" "}
           <div className="d_main_desc mt-3 text-center">
-            Choose from two industry-recognized courses designed to
-            <br /> transform beginners and professionals into job-ready
-            <br /> integration experts with hands-on projects and placement
-            <br /> support.
+            Our IBM Integration courses are perfect for beginners and
+            <br />
+            professionals, combining theory, hands-on practice, and career{" "}
+            <br />
+            support to make you a job-ready integration expert.
           </div>
           <div className="absolute -top-[-30%]">
             <Image
