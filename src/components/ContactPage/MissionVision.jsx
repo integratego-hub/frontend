@@ -9,7 +9,7 @@ export default function MissionVision() {
   return (
     <section className="py-10">
       <div className="container">
-        <div className="flex items-center justify-center gap-5">
+        <div className="flex flex-col md:flex md:items-center md:justify-center md:flex-row gap-5">
           <div className="mission-main">
             <Image src={img1} alt="Our Mission" width="auto" height="auto" />
             <div className="o-m-h">Our Mission</div>

@@ -1,0 +1,15 @@
+/* TEAM */
+Founder & Instructor: IntegrateGo Team
+Site: https://www.integratego.com
+Twitter: @IntegrateGo
+LinkedIn: https://www.linkedin.com/company/integrate-go
+Contact: support@integratego.com
+
+/* TECH */
+Framework: Next.js App Router
+Hosting: Vercel
+Analytics: Google Analytics / Plausible
+SEO: Structured Data + Sitemap + robots.txt
+
+/* THANKS */
+Thanks to all learners building the future of integration!

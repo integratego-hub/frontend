@@ -47,7 +47,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section className="my-5">
+    <section className="md:my-5 my-2">
       <div className="container">
         <div className="flex flex-col gap-2 items-center justify-center">
           <div className="h_main_heading">How It Works</div>

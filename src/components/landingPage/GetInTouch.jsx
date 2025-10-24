@@ -19,12 +19,12 @@ import Link from "next/link";
 
 export default function GetInTouch() {
   const [form, setForm] = useState({
-    fullName: null,
-    email: null,
-    phoneNumber: null,
-    interest: null,
-    message: null,
-    workshop: null,
+    fullName: "",
+    email: "",
+    phoneNumber: "",
+    interest: "",
+    message: "",
+    workshop: "",
   });
 
   const enquiryMutation = useMutation({
@@ -43,30 +43,32 @@ export default function GetInTouch() {
     enquiryMutation.mutate(form, {
       onSuccess: () => {
         setForm({
-          fullName: null,
-          email: null,
-          phoneNumber: null,
-          interest: null,
-          message: null,
-          workshop: null,
+          fullName: "",
+          email: "",
+          phoneNumber: "",
+          interest: "",
+          message: "",
+          workshop: "",
         });
       },
     });
   };
+
   return (
     <>
       <section className="g_main_container" id="get-in-touch">
-        <div className="container flex justify-center items-center">
-          <div className="grid grid-cols-2 gap-4 items-center justify-center">
+        <div className="container flex justify-center items-center px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center w-full max-w-6xl">
+            {/* Left Box (Form) */}
             <div className="g_in_box">
               <div className="g_f_h">Get in Touch</div>
               <div className="g_f_desc">
-                Have questions about our programs? We're here to <br /> help you
-                choose the right path for your career.
+                Have questions about our programs? We’re here to <br className="hidden sm:block" />
+                help you choose the right path for your career.
               </div>
               <form
                 onSubmit={handleSubmit}
-                className="flex flex-col gap-3 w-full sm:w-[80%] lg:w-[70%]"
+                className="flex flex-col gap-3 w-full"
               >
                 <input
                   className="form_input_text"
@@ -76,7 +78,6 @@ export default function GetInTouch() {
                   onChange={handleChange}
                   required
                 />
-
                 <input
                   className="form_input_text"
                   placeholder="Email Address"
@@ -86,7 +87,6 @@ export default function GetInTouch() {
                   onChange={handleChange}
                   required
                 />
-
                 <input
                   className="form_input_text"
                   placeholder="Number"
@@ -96,7 +96,6 @@ export default function GetInTouch() {
                   onChange={handleChange}
                   required
                 />
-
                 <select
                   className="form_input_text"
                   name="interest"
@@ -109,7 +108,6 @@ export default function GetInTouch() {
                     IBM Integration Bus (IIB) / IBM App Connect Enterprise (ACE)
                   </option>
                 </select>
-
                 <select
                   className="form_input_text"
                   name="workshop"
@@ -117,11 +115,10 @@ export default function GetInTouch() {
                   onChange={handleChange}
                   required
                 >
-                  <option value="">Interested in Workshop?</option>
+                  <option value="">Registered for Workshop?</option>
                   <option value="yes">Yes</option>
                   <option value="no">No</option>
                 </select>
-
                 <textarea
                   className="form_input_text"
                   placeholder="Message (Optional)"
@@ -129,7 +126,6 @@ export default function GetInTouch() {
                   value={form.message}
                   onChange={handleChange}
                 />
-
                 <button
                   type="submit"
                   className="form_btn"
@@ -139,135 +135,91 @@ export default function GetInTouch() {
                 </button>
 
                 {enquiryMutation.isSuccess && (
-                  <p className="text-green-600 mt-2">
+                  <p className="text-green-600 mt-2 text-sm">
                     {enquiryMutation.data?.message}
                   </p>
                 )}
-
                 {enquiryMutation.isError && (
-                  <p className="text-red-600 mt-2">
+                  <p className="text-red-600 mt-2 text-sm">
                     {enquiryMutation.error?.response?.data?.error ||
                       "Something went wrong"}
                   </p>
                 )}
               </form>
-              <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center gap-3 mt-4">
                 <div className="g_f_secure">Privacy Protected</div>
                 <div className="g_f_secure">Secure Communication</div>
               </div>
             </div>
+
+            {/* Right Box (Contact Info) */}
             <div className="g_s_box">
               <div className="g_c_head">Contact Information</div>
-              <div className="flex items-start gap-2">
-                <Image src={gc1} alt="Email" widdth="auto" height="auto" />
-                <div className="flex flex-col items-start gap-1">
-                  <div className="g_c_e_h">Email</div>
-                  <div className="g_c_e_desc">battula@integratego.com</div>
-                </div>
-              </div>
-              <div className="flex items-start gap-2">
-                <Image src={gc2} alt="Email" widdth="auto" height="auto" />
-                <div className="flex flex-col items-start gap-1">
-                  <div className="g_c_e_h">PhoneNumber</div>
-                  <div className="g_c_e_desc">+91 9705 558 559</div>
-                </div>
-              </div>
-              <div className="flex items-baseline gap-2">
-                <Image src={gc3} alt="Email" widdth="auto" height="auto" />
-                <div className="flex flex-col items-start gap-1">
-                  <div className="g_c_e_h">Support Hours</div>
-                  <div className="g_c_e_desc">
-                    Monday - Sunday: 9:00 AM - 10:00 PM <br /> Sunday: 10:00 AM
-                    - 6:00 PM
+
+              {[
+                { icon: gc1, title: "Email", desc: "battula@integratego.com" },
+                { icon: gc2, title: "Phone Number", desc: "+91 9705 558 559" },
+                {
+                  icon: gc3,
+                  title: "Support Hours",
+                  desc: "Mon - Sat: 9:00 AM - 10:00 PM\nSun: 10:00 AM - 6:00 PM",
+                },
+                { icon: gc4, title: "Office", desc: "KPHB, Hyderabad, 500085" },
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-2">
+                  <Image src={item.icon} alt={item.title} width={28} height={28} />
+                  <div className="flex flex-col items-start gap-1">
+                    <div className="g_c_e_h">{item.title}</div>
+                    <div className="g_c_e_desc whitespace-pre-line">
+                      {item.desc}
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="flex items-start gap-2">
-                <Image src={gc4} alt="Email" widdth="auto" height="auto" />
-                <div className="flex flex-col items-start gap-1">
-                  <div className="g_c_e_h">Office</div>
-                  <div className="g_c_e_desc">Kphb,Hyderabad,500085</div>
-                </div>
-              </div>
+              ))}
+
               <div className="g_c_b_l"></div>
-              <div className="flex items-center gap-3">
-                <div className="g_c_f_s_in">
-                  <Link href="https://www.linkedin.com/in/integrate-go-45b842385/">
-                    <Image
-                      src={gc5}
-                      alt="LinkedIN"
-                      width="auto"
-                      height="auto"
-                    />
-                  </Link>
-                </div>
-                <div className="g_c_f_s_you">
-                  <Link href="https://www.youtube.com/@IntegrateGo">
-                    <Image src={gc6} alt="Youtube" width="auto" height="auto" />
-                  </Link>
-                </div>
-                <div className="g_c_f_s_ins">
-                  <Link href="https://www.instagram.com/integrateg0/">
-                    <Image
-                      src={gc7}
-                      alt="Instagram"
-                      width="auto"
-                      height="auto"
-                    />
-                  </Link>
-                </div>
+              <div className="flex items-center gap-3 ">
+                <Link href="https://www.linkedin.com/in/integrate-go-45b842385/" className="g_c_f_s_in">
+                  <Image src={gc5} alt="LinkedIn" width={20} height={20} />
+                </Link>
+                <Link href="https://www.youtube.com/@IntegrateGo" className="g_c_f_s_you">
+                  <Image src={gc6} alt="YouTube" width={20} height={20} />
+                </Link>
+                <Link href="https://www.instagram.com/integrateg0/" className="g_c_f_s_ins">
+                  <Image src={gc7} alt="Instagram" width={20} height={20} />
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Footer */}
       <section className="footer_main">
-        <div className="container flex flex-col gap-4">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center gap-4">
-              <Link href="/" style={{ textDecoration: "none" }}>
-                <div className="f_l">Home</div>
-              </Link>
-              <Link href="/about-us" style={{ textDecoration: "none" }}>
-                <div className="f_l">About</div>
-              </Link>
-              <Link href="/privacy-policy" style={{ textDecoration: "none" }}>
-                <div className="f_l">Privacy</div>
-              </Link>
-              <Link
-                href="/terms-and-conditions"
-                style={{ textDecoration: "none" }}
-              >
-                <div className="f_l">Terms</div>
-              </Link>
-              <Link href="/no-refund-policy" style={{ textDecoration: "none" }}>
-                <div className="f_l">No Refund Policy</div>
-              </Link>
+        <div className="container flex flex-col gap-4 px-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
+              <Link href="/" className="f_l">Home</Link>
+              <Link href="/about-us" className="f_l">About</Link>
+              <Link href="/privacy-policy" className="f_l">Privacy</Link>
+              <Link href="/terms-and-conditions" className="f_l">Terms</Link>
+              <Link href="/no-refund-policy" className="f_l">No Refund Policy</Link>
             </div>
+
             <div className="flex items-center gap-3">
               <Link href="https://www.linkedin.com/in/integrate-go-45b842385/">
-                <Image
-                  src={footer1}
-                  alt="LinkedIn"
-                  width="auto"
-                  height="auto"
-                />
+                <Image src={footer1} alt="LinkedIn" width={24} height={24} />
               </Link>
               <Link href="https://www.instagram.com/integrateg0/">
-                <Image
-                  src={footer2}
-                  alt="Instagram"
-                  width="auto"
-                  height="auto"
-                />
+                <Image src={footer2} alt="Instagram" width={24} height={24} />
               </Link>
               <Link href="https://www.youtube.com/@IntegrateGo">
-                <Image src={footer3} alt="Youtube" width="auto" height="auto" />
+                <Image src={footer3} alt="YouTube" width={24} height={24} />
               </Link>
             </div>
           </div>
           <div className="g_c_b_l"></div>
-          <div className="flex items-center justify-center">
+          <div className="text-center text-sm">
             © 2025 IntegrateGo - All Rights Reserved
           </div>
         </div>

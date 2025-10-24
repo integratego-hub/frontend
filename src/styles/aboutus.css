@@ -41,6 +41,46 @@
   font-weight: 400;
   line-height: 29.25px; /* 162.5% */
 }
+/* Tablet: width <= 1024px */
+@media (max-width: 1024px) {
+  .au-her-main {
+    padding: 80px 60px;
+  }
+  .au-her-p1 {
+    font-size: 48px;
+    line-height: 60px;
+  }
+  .au-her-p2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .au-her-p3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+/* Mobile: width <= 768px */
+@media (max-width: 768px) {
+  .au-her-main {
+    padding: 60px 20px;
+  }
+  .au-her-p1 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .au-her-p2 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .au-her-p3 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .au-her-main {
+    border-radius: 20px;
+  }
+}
 
 .o-s-he {
   color: #111827;
@@ -85,6 +125,40 @@
   font-style: normal;
   font-weight: 400;
   line-height: 24px; /* 150% */
+}
+/* Tablet: width <= 1024px */
+@media (max-width: 1024px) {
+  .mission-main {
+    padding: 24px;
+  }
+  .o-m-h {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .o-m-p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+/* Mobile: width <= 768px */
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .mission-main {
+    padding: 16px;
+    width: 100%;
+  }
+  .o-m-h {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .o-m-p {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 .w-w-d-main-h {
   color: #111827;
@@ -177,10 +251,10 @@
   border-radius: 9999px;
   /* background: rgba(76, 147, 253, 0.1); */
   border-radius: 20px;
-border: 1px solid #EFEFEF;
-background: #FFF;
-box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.10);
-gap: 20px;
+  border: 1px solid #efefef;
+  background: #fff;
+  box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  gap: 20px;
 }
 
 .wt-heading {
@@ -200,4 +274,13 @@ gap: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px; /* 150% */
+}
+
+@media (max-width: 1024px) {
+  .au-m {
+    font-size: 20px;
+  }
+  .a-u-b-main {
+    min-height: 70vh;
+  }
 }

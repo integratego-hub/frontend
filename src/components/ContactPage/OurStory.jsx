@@ -5,7 +5,7 @@ export default function OurStory() {
   return (
     <section className="py-10">
       <div className="container">
-        <div className="flex items-center justify-center gap-5">
+        <div className="md:flex md:items-center md:justify-center gap-5">
           <div>
             <Image src={img1} alt="Our story" width="auto" height="auto" />
           </div>

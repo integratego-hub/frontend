@@ -46,7 +46,7 @@ export default function HeroSection() {
       <div className="l_scope_numbers mt-5">
         <div className="grid grid-cols-4 gap-4">
           <div className="l_card">
-            <div className="flex flex-col gap-2 items-center align-middle">
+            <div className="flex flex-col gap-2 items-center">
               <div className="l_Card_img">
                 <Image src={ld1} alt="curriculm" width="auto" height="auto" />
               </div>
@@ -56,7 +56,7 @@ export default function HeroSection() {
           </div>
 
           <div className="l_card">
-            <div className="flex flex-col gap-2 items-center">
+            <div className="flex flex-col gap-2 items-center l_c_in">
               <div className="l_Card_img">
                 <Image src={ld2} alt="curriculm" width="auto" height="auto" />
               </div>
@@ -66,7 +66,7 @@ export default function HeroSection() {
           </div>
 
           <div className="l_card">
-            <div className="flex flex-col gap-2 items-center">
+            <div className="flex flex-col gap-2 items-center l_c_in">
               <div className="l_Card_img">
                 <Image src={ld3} alt="curriculm" width="auto" height="auto" />
               </div>
@@ -76,7 +76,7 @@ export default function HeroSection() {
           </div>
 
           <div className="l_card">
-            <div className="flex flex-col gap-2 items-center">
+            <div className="flex flex-col gap-2 items-center l_c_in">
               <div className="l_Card_img">
                 <Image src={ld4} alt="curriculm" width="auto" height="auto" />
               </div>

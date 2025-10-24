@@ -26,8 +26,8 @@ export default function WhatWeDo() {
             From classroom to career, we cover every step of your journey
           </div>
         </div>
-        <div className="grid grid-cols-2 items-center mt-5">
-          <div className="flex flex-col items-start gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center mt-5 gap-3">
+          <div className="flex flex-col items-start gap-2 md:gap-4">
             <Image
               src={img1}
               alt="Hands On Training"
@@ -48,12 +48,19 @@ export default function WhatWeDo() {
               alt="Hands On Training"
               width="auto"
               height="auto"
+              className="hidden md:block"
             />
           </div>
           <div>
-            <Image src={img3} alt="Career Support" width="auto" height="auto" />
+            <Image
+              src={img3}
+              alt="Career Support"
+              width="auto"
+              height="auto"
+              className="hidden md:block"
+            />
           </div>
-          <div className="flex flex-col items-start gap-4">
+          <div className="flex flex-col items-start gap-2 md:gap-4">
             <Image
               src={img4}
               alt="Hands On Training"
@@ -70,7 +77,7 @@ export default function WhatWeDo() {
               learning journey and beyond.
             </div>
           </div>
-          <div className="flex flex-col items-start gap-4">
+          <div className="flex flex-col items-start gap-2 md:gap-4">
             <Image
               src={img5}
               alt="Placement Assistance"
@@ -94,10 +101,12 @@ export default function WhatWeDo() {
               alt="Placement Assistance"
               width="auto"
               height="auto"
+              className="hidden md:block"
             />
           </div>
         </div>
       </div>
+
       <div className="a-u-b-main mt-5">
         <div className="au-m">
           We believe education is not just about learning – it's
@@ -113,7 +122,7 @@ export default function WhatWeDo() {
         <div>
           <div className="w-w-d-main-h">Why We're Different</div>
         </div>
-        <div className="grid grid-cols-2  items-start mt-5">
+        <div className="grid grid-cols-1 md:grid-cols-2  items-start mt-5">
           <Image src={img7} alt="why we diffrent" width="auto" height="auto" />
           <div className="flex flex-col items-start gap-7">
             <div className="flex items-start gap-3">
@@ -159,7 +168,7 @@ export default function WhatWeDo() {
                 </div>
               </div>
             </div>
-            <div className="flex gap-5">
+            <div className="flex flex-col items-center justify-center w-full gap-5 md:flex-row">
               <div className="flex flex-col gap-2">
                 <div className="wb-tr">Trusted by</div>
                 <div className="wb-num">1000+ Learners</div>

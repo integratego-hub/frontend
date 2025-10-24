@@ -1,0 +1,28 @@
+# robots.txt for https://www.integratego.com
+User-agent: *
+Allow: /
+
+# Block sensitive folders
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /draft/
+Disallow: /_next/
+Disallow: /*?utm_*
+Disallow: /*?ref_*
+Disallow: /*?session_*
+
+# Allow important bots full access
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap location (critical!)
+Sitemap: https://www.integratego.com/sitemap.xml

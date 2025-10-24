@@ -104,14 +104,27 @@ export default function UpcomingBatches() {
   const [progress, setProgress] = useState(0);
   const intervalRef = useRef(null);
 
+  // const [sliderRef, instanceRef] = useKeenSlider({
+  //   loop: true,
+  //   slides: { perView: 3, spacing: 20 },
+  //   slideChanged(slider) {
+  //     setCurrentSlide(slider.track.details.rel);
+  //     setProgress(0); // Reset progress when slide changes
+  //   },
+  // });
   const [sliderRef, instanceRef] = useKeenSlider({
-    loop: true,
-    slides: { perView: 3, spacing: 20 },
-    slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel);
-      setProgress(0); // Reset progress when slide changes
-    },
-  });
+  loop: true,
+  slides: { perView: 3, spacing: 20 },
+  breakpoints: {
+    "(max-width: 1024px)": { slides: { perView: 2, spacing: 15 } },
+    "(max-width: 768px)": { slides: { perView: 1, spacing: 10 } },
+  },
+  slideChanged(slider) {
+    setCurrentSlide(slider.track.details.rel);
+    setProgress(0);
+  },
+});
+
 
   // Autoplay with progress tracking
   useEffect(() => {
@@ -145,7 +158,7 @@ export default function UpcomingBatches() {
   }, [currentSlide, instanceRef]);
 
   return (
-    <section className="mt-[200px] main_up_bg_container">
+    <section className="mt-100px lg:mt-[200px] main_up_bg_container">
       <div className="container">
         <div className="flex flex-col gap-2">
           <div className="up_main_heading">Upcoming Batches</div>

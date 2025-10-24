@@ -44,6 +44,7 @@ export default function Hero() {
                   width="auto"
                   height="auto"
                   alt="Learning through Excellence"
+                  priority
                 />
               </div>
             </div>

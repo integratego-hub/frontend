@@ -76,6 +76,126 @@
   border-radius: 50%;
   background: #dbeafe;
 }
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+/* Tablets (up to 1024px) */
+@media (max-width: 1024px) {
+  .d_main_head {
+    font-size: 45px;
+    line-height: 50px;
+    padding: 0 20px;
+  }
+
+  .expert_led {
+    font-size: 45px;
+    line-height: 50px;
+  }
+
+  .d_main_desc {
+    font-size: 18px;
+    line-height: 28px;
+    padding: 0 15px;
+  }
+
+  .l_scope_numbers {
+    padding: 60px 0;
+  }
+
+  .grid.grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .l_card {
+    padding: 15px 30px;
+  }
+
+  .l_Card_head {
+    font-size: 26px;
+  }
+
+  .l_card_desc {
+    font-size: 15px;
+  }
+}
+
+/* Mobile (up to 768px) */
+@media (max-width: 768px) {
+  .d_main_head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .d_main_head span {
+    display: block; /* Ensure spans wrap properly */
+    width: 100%;
+  }
+  .expert_led {
+    font-size: 32px;
+    line-height: 40px;
+  }
+.d_main_head, .expert_led {
+  word-break: break-word;
+}
+
+  .d_main_desc {
+    font-size: 16px;
+    line-height: 26px;
+    padding: 0 10px;
+   
+  }
+
+  .l_scope_numbers {
+    flex-direction: column;
+    padding: 40px 0;
+  }
+
+  .grid.grid-cols-4 {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .l_card {
+    width: 100%;
+    padding: 15px 25px;
+    flex-direction: column;
+  }
+
+  .l_Card_head {
+    font-size: 24px;
+  }
+.l_c_in{
+
+  align-items: center !important;
+}
+  .l_card_desc {
+    font-size: 14px;
+  }
+
+  .l_Card_img {
+    padding: 15px;
+  }
+
+  .d_main_head br {
+    display: none; /* Prevents awkward breaks on narrow screens */
+  }
+
+  .d_main_head {
+    text-align: center;
+  }
+
+  .d_main_desc {
+    text-align: center;
+  }
+
+  .absolute {
+    position: relative !important;
+  }
+}
 
 /* Goal Section */
 
@@ -162,6 +282,115 @@
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -4px rgba(0, 0, 0, 0.1);
 }
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+/* Tablets (up to 1024px) */
+@media (max-width: 1024px) {
+  .d-g-h {
+    font-size: 30px;
+    line-height: 36px;
+    padding: 0 20px;
+  }
+
+  .d-g-h span {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .g-c-main-p {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    margin-top: 40px;
+  }
+
+  .g-main-course-heading {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .g-main-para {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .g-c-p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .course-pr-img {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .g-c-c {
+    gap: 12px;
+  }
+}
+
+/* Mobile (up to 768px) */
+@media (max-width: 768px) {
+  .d-g-h {
+    font-size: 26px;
+    line-height: 32px;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .d-g-h span {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .g-c-main-p {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 30px;
+  }
+
+  .g-main-course-heading {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .g-main-para {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .g-c-p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .c-m-du,
+  .c-m-du-h {
+    font-size: 13px;
+  }
+
+  .g-c-c {
+    gap: 10px;
+  }
+
+  .course-pr-img {
+    width: 100%;
+    border-radius: 16px;
+  }
+
+  .flex.items-center.gap-3 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .flex.items-center.gap-2 {
+    align-items: flex-start;
+  }
+}
 
 /* Process section */
 .p-m-h {
@@ -243,6 +472,117 @@
   line-height: normal;
   text-transform: capitalize;
 }
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+/* Tablets (up to 1024px) */
+@media (max-width: 1024px) {
+  .p-m-h {
+    font-size: 30px;
+    line-height: 42px;
+    padding: 0 20px;
+  }
+
+  .p-m-p {
+    font-size: 15px;
+    line-height: 22px;
+    padding: 0 15px;
+  }
+
+  .d-p-m-box {
+    gap: 60px;
+    margin-top: 40px;
+  }
+
+  .d-p-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .d-p-f-h {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .d-p-f-p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .d-p-m-h {
+    font-size: 40px;
+  }
+
+  .dpl {
+    display: none; /* Hide decorative line on medium screens to avoid overlap */
+  }
+
+  .flex.justify-between.items-center {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+}
+
+/* Mobile (up to 768px) */
+@media (max-width: 768px) {
+  .p-m-h {
+    font-size: 26px;
+    line-height: 34px;
+    padding: 0 10px;
+  }
+
+  .p-m-p {
+    font-size: 14px;
+    line-height: 22px;
+    padding: 0 10px;
+  }
+
+  .d-p-m-box {
+    gap: 40px;
+    margin-top: 30px;
+  }
+
+  .d-p-card {
+    flex-direction: column;
+    text-align: left;
+    padding: 16px;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .d-p-f-h {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .d-p-f-p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .d-p-m-h {
+    font-size: 28px;
+  }
+
+  .dpl {
+    display: none;
+  }
+
+  .flex.justify-between.items-center {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 15px;
+  }
+
+  .d-p-m-h {
+    align-self: flex-start;
+  }
+}
 
 /* Skills Master */
 .sm-container {
@@ -301,6 +641,96 @@
   flex-shrink: 0;
   position: relative;
 }
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+/* Tablets (up to 1024px) */
+@media (max-width: 1024px) {
+  .s-m-h {
+    font-size: 26px;
+    line-height: 34px;
+    margin-bottom: 0;
+  }
+
+  .sm-container {
+    padding: 60px 0;
+  }
+
+  .s-ss-1,
+  .s-ss-2,
+  .s-ss-3 {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  /* Reposition icons above SVGs for a cleaner stacked look */
+  .relative > div.absolute {
+    position: static !important;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .relative > div.absolute img {
+    width: 60px;
+    height: auto;
+  }
+
+  .relative > div.absolute div {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 8px;
+  }
+}
+
+/* Mobile (up to 768px) */
+@media (max-width: 768px) {
+  .s-m-h {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .sm-container {
+    padding: 40px 0;
+  }
+
+  .s-ss-1,
+  .s-ss-2,
+  .s-ss-3 {
+    display: none; /* Hide complex SVGs on mobile for clarity */
+  }
+
+  /* Create a clean vertical stack of skill items on small screens */
+  .flex.justify-center.items-center.flex-col > .relative {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .flex.justify-center.items-center.flex-col > .relative div.absolute {
+    position: static !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .flex.justify-center.items-center.flex-col > .relative div.absolute img {
+    width: 50px;
+    height: auto;
+  }
+
+  .flex.justify-center.items-center.flex-col > .relative div.absolute div {
+    font-size: 13px;
+    line-height: 18px;
+    margin-top: 5px;
+  }
+}
 
 /* Transformation Journey */
 .t-j-m-h {
@@ -355,4 +785,105 @@
   font-style: normal;
   font-weight: 400;
   line-height: 24px; /* 150% */
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+/* Tablets (up to 1024px) */
+@media (max-width: 1024px) {
+  .t-j-m-h {
+    font-size: 26px;
+    line-height: 34px;
+    margin-bottom: 30px;
+  }
+
+  .flex.gap-\[32px\] {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .t-main-card,
+  .t-main-card-after {
+    width: 100%;
+    padding: 25px 40px;
+    max-width: 600px;
+  }
+
+  .t-main-card img,
+  .t-main-card-after img {
+    width: 50px;
+    height: auto;
+  }
+
+  .b-p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .t-before-h {
+    font-size: 18px;
+  }
+}
+
+/* Mobile (up to 768px) */
+@media (max-width: 768px) {
+  .t-j-m-h {
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+
+  .flex.gap-\[32px\] {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .t-main-card,
+  .t-main-card-after {
+    padding: 20px;
+    border-radius: 16px;
+    border-left: 3px solid #4c93fd;
+    width: 100%;
+  }
+
+  .t-main-card img,
+  .t-main-card-after img {
+    width: 40px;
+  }
+
+  .t-before-h {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .b-p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  /* Center the text and adjust icons for small screens */
+  .t-main-card > div,
+  .t-main-card-after > div {
+    width: 100%;
+  }
+
+  .flex.flex-col.items-start.gap-3 {
+    align-items: center;
+  }
+
+  .flex.gap-2.items-center {
+    justify-content: center;
+  }
+
+  li.b-p {
+    text-align: center;
+  }
+
+  .t-main-card img.absolute,
+  .t-main-card-after img.absolute {
+    display: none; /* Hide top-right decorative icons on mobile for simplicity */
+  }
 }

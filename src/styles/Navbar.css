@@ -59,3 +59,16 @@
   font-weight: 400;
   line-height: 24px; /* 150% */
 }
+
+/* Mobile Menu Animation */
+.mobile-menu {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Container padding for mobile */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

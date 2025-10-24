@@ -47,7 +47,7 @@ export default function WhyChoose() {
               Enterprise (ACE).
             </div>
           </div>
-          <div className="flex gap-3 items-center justify-center">
+          <div className="flex gap-3 lg:items-center lg:justify-center flex-col md:flex-row">
             {options.map((item, index) => (
               <div className="why_main_card" key={index}>
                 <div className="why_main_inside">
