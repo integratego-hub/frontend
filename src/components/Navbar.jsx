@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [newFeture,setNewFeature] = useState(false)
+  console.log("bug fixed")
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
